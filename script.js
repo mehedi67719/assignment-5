@@ -10,6 +10,8 @@ for(const callbutton of callbuttons){
             alert("you have no enough coin");
             return
         }
+
+     
         const card=callbutton.closest("div.card-container")
 
         const servicename=card.querySelector("h3").innerText;
@@ -22,6 +24,7 @@ for(const callbutton of callbuttons){
 
         const newcoin=(presentcoin)-20;
         document.getElementById("coin").innerText=newcoin;
+           
 
 
 
@@ -56,6 +59,7 @@ for(const callbutton of callbuttons){
 
 document.getElementById("call-history-clear").addEventListener("click",function(){
     document.getElementById("call-history").innerText="";
+    
 
 })
 
@@ -73,6 +77,8 @@ for(const hart of hart_icon){
         hartcount=hartcount+1;
 
         document.getElementById("hart-count").innerText=hartcount;
+
+        
     })
 }
 
@@ -93,6 +99,8 @@ for(const copy of copybtn){
         copycount=copycount+1;
 
         document.getElementById("copy-count").innerText=copycount;
+
+        
     })
 }
 
@@ -106,8 +114,13 @@ for(const hotlinenumbeer of  hotlinenumbeers){
     hotlinenumbeer.addEventListener("click",function(){
         const text=hotlinenumbeer.innerText;
         navigator.clipboard.writeText(text);
+        
     })
 }
+
+
+
+
 
 
 
