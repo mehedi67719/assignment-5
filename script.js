@@ -1,4 +1,5 @@
-// call button 
+document.addEventListener("DOMContentLoaded", function() {
+    // call button 
 
 const callbuttons=document.querySelectorAll(".call-btn");
 
@@ -107,4 +108,10 @@ for(const hotlinenumbeer of  hotlinenumbeers){
         navigator.clipboard.writeText(text);
     })
 }
+
+
+
+ })
+
+
 
