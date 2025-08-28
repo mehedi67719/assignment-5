@@ -51,6 +51,18 @@ for(const callbutton of callbuttons){
 
 
 
+// call history clear 
+
+document.getElementById("call-history-clear").addEventListener("click",function(){
+    document.getElementById("call-history").innerText="";
+
+})
+
+
+
+
+
+// add hart count 
 
 let hartcount=Number(document.getElementById("hart-count").innerText);
 const hart_icon=document.querySelectorAll(".hart-icon");
@@ -63,3 +75,35 @@ for(const hart of hart_icon){
     })
 }
 
+
+
+
+// copy count 
+
+
+
+let  copycount=Number(document.getElementById("copy-count").innerText);
+
+const copybtn=document.querySelectorAll(".copy-btn");
+
+for(const copy of copybtn){
+    copy.addEventListener("click",function(){
+        alert("Text copied successfully!")
+        copycount=copycount+1;
+
+        document.getElementById("copy-count").innerText=copycount;
+    })
+}
+
+
+
+// hotlline number copy 
+
+
+const hotlinenumbeers=document.querySelectorAll(".number");
+for(const hotlinenumbeer of  hotlinenumbeers){
+    hotlinenumbeer.addEventListener("click",function(){
+        const text=hotlinenumbeer.innerText;
+        navigator.clipboard.writeText(text);
+    })
+}
